@@ -1,3 +1,6 @@
+> NOTES: This repository is not completed,I warned you before using it!!!
+
+> ALSO NOTES: This repository only supports 64-bit versions of Microsoft Windows 7 and above!!!
 # Lotus
 Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards software and game development and also for basic needs
 
