@@ -10,6 +10,7 @@ Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards s
 - Fully free,No payments,No purchases
 - Great for game and software development
 - Comes with all needs to install (You need to download and install packages needed,See [here]() for download and installation)
+- Also it comes with music player for having fun while coding
 
 # Things may notice and will fix later on
 Lotus is currently in BETA and may still,So weird things may face is:
