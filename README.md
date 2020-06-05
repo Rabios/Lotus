@@ -96,7 +96,7 @@ Lotus IDE Licensed under MIT License,Following all the third parties that used b
 - [How to translate Lotus IDE](https://github.com/Rabios/Lotus/blob/master/Translate.md)
 
 ## Screenshots
-<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(116).png">
+<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(119).png">
 <br>
 <img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(118).png">
 <br>
