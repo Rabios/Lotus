@@ -1,0 +1,4 @@
+These are the snippets,Each line of text in textfiles is snippet.
+To know how to add your own snippets,Check link below
+
+https://github.com/Rabios/Lotus/blob/master/Snippets.md

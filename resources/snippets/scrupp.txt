@@ -1,0 +1,274 @@
+scrupp.getSearchPath()
+scrupp.setSearchPath(array)
+scrupp.fileExists(filename)
+scrupp.isDirectory(path)
+scrupp.isSymbolicLink(filename)
+render(delta)
+update(delta)
+resized(width, height)
+keypressed(key, utf8_string)
+keyreleased(key)
+mousepressed(x, y, button)
+mousereleased(x, y, button)
+scrupp.VERSION
+scrupp.PLATFORM
+scrupp.init(title, width, height, bit_depth, fullscreen, [resizable])
+scrupp.getWindowWidth()
+scrupp.getWindowHeight()
+scrupp.getWindowSize()
+scrupp.getTicks()
+scrupp.setDelta(delta)
+scrupp.showCursor([show])
+scrupp.exit()
+scrupp.translateView(x, y)
+scrupp.scaleView(sx, sy)
+scrupp.rotateView(angle)
+scrupp.saveView()
+scrupp.restoreView() 
+scrupp.resetView()
+scrupp.draw(table)
+scrupp.addImage(filename)
+scrupp.addImageFromString(str)
+image:getWidth()
+image:getHeight()	
+image:getSize()
+image:isTransparent(x, y)
+image:setAlpha(alpha)
+image:getAlpha()
+image:setColor(color)
+image:setColor(r, g, b)
+image:getColor()
+image:clearColor()
+image:setCenterX(cx)
+image:setCenterY(cy)
+image:setCenter(cx, cy)
+image:render(x, y)
+image:getCenterX()
+image:getCenterY()
+image:getCenter()
+image:setScaleX(sx)
+image:setScaleY(sy)
+image:setScale(sx, sy)
+image:getScaleX()
+image:getScaleY()
+image:getScale()
+image:setRotation(angle)
+image:getRotation()
+image:setRect(x, y, w, h)
+image:getRect()
+image:clearRect()
+image:render(x, y)
+image:render(table)
+Cairo.image_surface_create_from_png(file/filename)
+Cairo.image_surface_create_from_file(filename)
+scrupp.addImageFromCairo(surface)
+scrupp.addFont(filename, size)
+font:getTextSize(text)
+font:getHeight()
+font:getLineSkip()
+font:generateImage(text)
+scrupp.addSound(filename)
+sound:setVolume(volume)
+sound:getVolume()
+sound:play([loops=1])
+sound:pause()
+sound:resume()
+sound:stop()
+sound:isPlaying()
+sound:isPaused()
+scrupp.addMusic(filename)
+music:play([loops=0], [fade_in_time=0])
+scrupp.setMusicVolume(volume)
+scrupp.getMusicVolume()
+scrupp.pauseMusic()
+scrupp.resumeMusic()
+scrupp.stopMusic([fade_out_time=0])
+scrupp.rewindMusic()
+scrupp.musicIsPlaying()
+scrupp.musicIsPaused()
+scrupp.addMovie(filename)
+movie:play([loop])
+movie:pause()
+movie:resume()
+movie:rewind()
+movie:stop()
+movie:getWidth()
+movie:getHeight()
+movie:getSize()
+movie:getInfo()
+movie:isPlaying()
+movie:setAlpha(alpha)
+movie:getAlpha()
+movie:loadFirstFrame()
+movie:render(x,y)
+movie:render(table)
+scrupp.getMouseX()
+scrupp.getMouseY()
+scrupp.getMousePos()
+scrupp.mouseButtonIsDown(button)
+mousepressed(x, y, button)
+mousereleased(x, y, button)
+scrupp.keyIsDown(key)
+scrupp.setKeyRepeat(delay, interval)
+keypressed(key, utf8_string)
+keyreleased(key)
+vect.dot(v1_x, v1_y, v2_x, v2_y)
+vect.cross(v1_x, v1_y, v2_x, v2_y)
+vect.perp(v_x, v_y)
+vect.rperp(v_x, v_y)
+vect.project(v1_x, v1_y, v2_x, v2_y)
+vect.rotate(v1_x, v1_y, v2_x, v2_y)
+vect.unrotate(v1_x, v1_y, v2_x, v2_y)
+vect.length(v_x, v_y)
+vect.lengthsq(v_x, v_y)
+vect.lerp(v1_x, v1_y, v2_x, v2_y, t)
+vect.lerpconst(v1_x, v1_y, v2_x, v2_y, d)
+vect.slerp(v1_x, v1_y, v2_x, v2_y, t)
+vect.slerpconst(v1_x, v1_y, v2_x, v2_y, angle)
+vect.clamp(v_x, v_y, len)
+vect.normalize(v_x, v_y)
+vect.normalize_safe(v_x, v_y)
+vect.dist(v1_x, v1_y, v2_x, v2_y)
+vect.distsq(v1_x, v1_y, v2_x, v2_y)
+vect.dist()
+vect.near(v1_x, v1_y, v2_x, v2_y, dist)
+vect.forangle(angle)
+vect.toangle(v_x, v_y)
+bb.intersects(bb1_l, bb1_b, bb1_r, bb1_t, bb2_l, bb2_b, bb2_r, bb2_t)
+bb.containsBB(bb1_l, bb1_b, bb1_r, bb1_t, bb2_l, bb2_b, bb2_r, bb2_t)
+bb.containsVect(bb1_l, bb1_b, bb1_r, bb1_t, v_x, v_y)
+bb.clampVect(bb1_l, bb1_b, bb1_r, bb1_t, v_x, v_y)
+bb.wrapVect(bb1_l, bb1_b, bb1_r, bb1_t, v_x, v_y)
+newBody
+newStaticBody
+body:setMass
+body:getMass
+body:setMoment
+body:getMoment
+body:setPosition
+body:getPosition
+body:setVelocity
+body:getVelocity
+body:setForce
+body:getForce
+body:setAngle
+body:getAngle
+body:setAngularVelocity
+body:getAngularVelocity
+body:setTorque
+body:getTorque
+body:getRotation
+body:getLocal2World
+body:getWorld2Local
+body:applyImpulse
+body:applyForce
+body:applyDampedSpring
+body:resetForces
+shape:setBody
+shape:getBody
+shape:setSensor
+shape:isSensor()
+shape:setCollisionType
+shape:getCollisionType
+shape:setGroup
+shape:getGroup
+shape:setLayers
+shape:getLayers
+shape:getBB
+shape:cacheBB
+shape:setElasticity
+shape:getElasticity
+shape:setFriction
+shape:getFriction
+shape:setSurfaceVelocity
+shape:getSurfaceVelocity
+newCircleShape
+calcCircleMoment
+circleShape:getRadius
+circleShape:getOffset
+newSegmentShape
+calcSegmentMoment
+segmentShape:getA
+segmentShape:getB
+segmentShape:getRadius
+segmentShape:getNormal
+newPolyShape
+calcPolyMoment
+polyShape:getVert
+polyShape:getNumVerts
+newSpace
+space:addBody
+space:removeBody
+space:addShape
+space:removeShape
+space:addStaticShape
+space:removeStaticShape
+space:addConstraint
+space:removeConstraint
+space:addCollisionHandler
+space:removeCollisionHandler
+space:freeChildren
+space:setIterations
+space:getIterations
+space:setElasticIterations
+space:getElasticIterations
+space:setGravity
+space:getGravity
+space:setDamping
+space:getDamping
+space:getDamping
+space:step
+space:resizeStaticHash
+space:resizeActiveHash
+space:rehashStatic
+space:activeShapes
+space:staticShapes
+space:pointQueryFirst
+space:addCollisionHandler 
+class(ctor) 
+class(base, ctor)
+obj:init(...)
+obj:is_a(class)
+Animation()
+animation:addFrame(image, x, y, width, height, delay)
+animation:addFrames(image, sizex, sizey, width, height, sep, delay)
+animation:getWidth()
+animation:getHeight()
+animation:getSize()
+animation:isTransparent(x, y)
+animation:copy()
+animation:start()
+animation:stop()
+animation:render(x, y, delta)
+white
+black
+gray
+silver
+maroon
+red
+green
+lime
+olive
+yellow
+navy
+blue
+purple
+fuchsia
+teal
+aqua
+local color = require "color"
+require "animation"
+Font(filename, size)
+Font:getTextSize(text)
+Font:getHeight()
+Font:getLineSkip()
+Font:generateImage(text)
+Font:generateImage(table)
+Font:setColor(color)
+Font:cache([str])
+Font:print(x, y, ...)
+Timer(duration, callback)
+Timer:start()
+Timer:stop()
+Timer:reset()
+Timer:update()

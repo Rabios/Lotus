@@ -1,0 +1,66 @@
+AudioStream
+Blob
+Canvas
+Channel
+Collider
+Curve
+Font
+Joints
+Material
+Mesh
+Microphone
+Model
+ModelData
+RandomGenerator
+Rasterizer
+Shader
+ShaderBlock
+Shapes
+SoundData
+Source
+Texture
+TextureData
+Thread
+World
+lovr.audio
+lovr.data
+lovr.event
+lovr.filesystem
+lovr.graphics
+lovr.headset
+lovr.math
+lovr.physics
+lovr.thread
+lovr.timer
+local json = require("cjson")
+function lovr.conf(t) end
+function lovr.draw() end
+function lovr.errhand() end
+function lovr.focus() end
+function lovr.load() end
+function lovr.mirror() end
+function lovr.quit() end
+function lovr.run() end
+function lovr.threaderror() end
+function lovr.update(t) end
+lovr.getVersion()
+lovr.getOS()
+lovr.event.clear()
+lovr.event.poll()
+lovr.event.pump()
+lovr.event.push(args)
+lovr.event.quit(code)
+lovr.thread.getChannel(name)
+lovr.thread.newThread(thread)
+lovr.timer.getAverageDelta()
+lovr.timer.getDelta()
+lovr.timer.getFPS()
+lovr.timer.getTime()
+lovr.timer.sleep(seconds)
+lovr.timer.step()
+lovr.data.newAudioStream(f,buffersize)
+lovr.data.newBlob(size,name)
+lovr.data.newModelData(f)
+lovr.data.newRasterizer(f,size)
+lovr.data.newSoundData()
+lovr.data.newTextureData()

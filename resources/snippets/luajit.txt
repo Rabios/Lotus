@@ -1,0 +1,40 @@
+ffi
+local ffi = require("ffi")
+ffi.cdef(def)
+ffi.C
+ffi.load(name [,global])
+ffi.new(ct [,nelem] [,init...])
+ctype([nelem,] [init...])
+ffi.typeof(ct)
+ffi.metatype(ct, metatable)
+ffi.gc(cdata, finalizer)
+ffi.C.free(ffi.gc(v, nil))
+ffi.sizeof(ct [,nelem])
+ffi.alignof(ct)
+ffi.offsetof(ct, field)
+ffi.istype(ct, obj)
+ffi.errno([newerr])
+ffi.string(ptr [,len])
+ffi.copy(dst, src, len)
+ffi.copy(dst, str)
+ffi.fill(dst, len [,c])
+ffi.abi(param)
+ffi.os
+ffi.arch
+cb:free()
+cb:set(func)
+jit.on()
+jit.off()
+jit.flush()
+jit.on(func|true [,true|false])
+jit.off(func|true [,true|false])
+jit.flush(func|true [,true|false])
+jit.flush(tr)
+jit.status()
+jit.version
+jit.version_num
+jit.os
+jit.arch
+jit.opt
+jit.opt.start
+jit.util
