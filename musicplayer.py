@@ -2,19 +2,12 @@
 
 debug = open("debug.txt","a+")
 
-# Import Libs 
-try:
-    import Tkinter as tk
-    from Tkinter import ttk
-    from Tkinter import tix
-    from Tkinter import tkMessageBox
-    from Tkinter import tkFileDialog
-except ImportError:
-    import tkinter as tk
-    from tkinter.ttk import *
-    from tkinter.tix import *
-    from tkinter import messagebox
-    from tkinter import filedialog
+# Import Libs
+import tkinter as tk
+from tkinter.ttk import *
+from tkinter.tix import *
+from tkinter import messagebox
+from tkinter import filedialog
 from playsound import playsound
 from os import *
 from datetime import datetime
