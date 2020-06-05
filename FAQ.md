@@ -1,18 +1,16 @@
 # FAQ
 
 ## Does Lotus IDE runs on 32-bit devices?
-NO,Only 64-bit,Only Microsoft Windows 7 and above!!!
+NO,Only 64-bit!!!
 
 ## Is Lotus IDE cross-platform?
-Until now,It's only supports Microsoft Windows 7 and above,Sorry there is no Linux and Mac support,But you can help us by porting project to Linux and Mac if you can
+Until now,It's only supports Microsoft Windows 7 and up,Sorry there is no Linux and Mac support,But you can help us by porting project to Linux and Mac if you can
 
 ## Does Lotus IDE takes huge size?
-NO,Only over 180 MB the installer size,But at launch it extracts packages (This only occurs first time),So his size become over 500 MB
+NO,Only 130 MB the installer size,But at launch it extracts packages (This only occurs first time),So his size become over 500 MB
 
-## Why source code not bundled as executable,Even installer installs source?
-To provide ability to modify,But as normal user install all needs (Just run `install_requirements.bat` for the first time) and then run `launch.bat` to start IDE everytime
-
-Else if you are run from source,Use `install_dependencies.bat` instead of `install_requirements.bat` for the first time then run `launch.bat` to start IDE everytime
+## Why is not bundled as executable?
+That to provide ability to modify,But as normal user install all needs (Just run `install_requirements.bat` at first time) and then run `launch.bat` to start IDE everytime
 
 ## Why highlighting has parsing problems?
 That caused by pygments and the somehow highlighting code system,Help us and fix it if you want

@@ -42,6 +42,7 @@ snippets_content = [ open("resources/snippets/custom.txt","r"),
                      open("resources/snippets/lua.txt","r"),
                      open("resources/snippets/luajit.txt","r"),
                      open("resources/snippets/lualibs.txt","r"),
+                     open("resources/snippets/moonscript.txt","r"),
                      open("resources/snippets/love2d.txt","r"),
                      open("resources/snippets/lovr.txt","r"),
                      open("resources/snippets/amulet.txt","r"),
@@ -72,6 +73,10 @@ from pygments.token import Token
 from pygments.lexers.scripting import LuaLexer
 from pathlib import *
 from shutil import *
+import tokenize as tokenize
+import io as io
+from keyword import *
+
 
 # Classes for code editor
 class TextLineNumbers(tk.Canvas):
@@ -198,7 +203,7 @@ def clear_log():
         
 def about():
     log("DISPLAYING ABOUT WINDOW...")
-    messagebox.showinfo("About Lotus IDE","Lotus IDE v0.0.9\nLotus is an Open-Source IDE for Moonscript and Lua written in Python 3\n\nWritten by Rabia Alhaffar")
+    messagebox.showinfo("About Lotus IDE","Lotus IDE v0.1.1 BETA\nLotus is an Open-Source IDE for Moonscript and Lua written in Python 3\n\nWritten by Rabia Alhaffar")
     log("ABOUT WINDOW DISPLAYED SUCCESSFULLY!!!")
     
 def source():
@@ -1060,8 +1065,8 @@ snippets_listbox.bind('<<ListboxSelect>>',insert_selected)
 
 # Syntax highlighting with pygments
 # NOTES: The parser is somehow buggy
-def tag(event):
-    def colorize(word, color):
+def tag(*args):
+    def color(word, color):
         index = []
         index1 = codeeditor.search(word, "1.0", "end")
         while index1:
@@ -1073,23 +1078,69 @@ def tag(event):
             codeeditor.tag_configure(word, foreground=color)
 
     for token, content in lex(codeeditor.get("1.0", "end"), LuaLexer()):
-        if token == Token.Literal.Number.Integer or token == Token.Literal.Number.Float:
-            colorize(content, color="orange")
+        if token == Token.Literal.Number.Integer or token == Token.Literal.Number.Float or token == Token.Literal.Number.Hex:
+            color(content,color = "orange")
         elif token == Token.Operator.Word:
-            colorize(content, color="blue")
+            color(content,color = "blue")
+        elif token == Token.Operator:
+            color(content,color = "red")
         elif token == Token.Name.Builtin:
-            colorize(content, color="blue")
-        elif token == Token.Comment.Single or token == Token.Comment.Multiline:
-            colorize(content, color="green")
+            color(content,color = "blue")
+        elif token == Token.Comment.Single or token == Token.Comment.Multiline or token == Token.Comment.Special:
+            color(content,color = "grey")
+        elif token == Token.Literal.String.Single:
+            color(content,color = "green")
         elif token == Token.Punctuation:
-            colorize(content, color="black")
+            color(content,color = "black")
         elif token == Token.Keyword.Reserved:
-            colorize(content,color = "blue")
+            color(content,color = "blue")
         elif token == Token.Name.Function:
-            colorize(content,color = "purple")
+            color(content,color = "purple")
         elif token == Token.Keyword.Declaration:
-            colorize(content,color = "blue")
-    
+            color(content,color = "blue")
+
+# The new highlighter,DO NOT DELETE THE OLD cause combined with the new
+def colorize(*args):
+    global count
+    row1, col1 = args[0].start
+    row1, col1 = str(row1), str(col1)
+    row2, col2 = args[0].end
+    row2, col2 = str(row2), str(col2)
+    start = ".".join((row1, col1))
+    end = ".".join((row2, col2))
+    codeeditor.tag_add(str(count), start, end)
+    try:
+        codeeditor.tag_config(str(count), foreground=args[1], font=args[2])
+    except IndexError:
+        codeeditor.tag_config(str(count), foreground=args[1])
+    count += 1
+
+
+def search(event):
+    try:
+        for i in tokenize.tokenize(io.BytesIO(codeeditor.get("1.0", "end").encode("utf-8")).readline):
+            print(i.type)
+            if i.type == 1:
+                if i.string in snippets_list:
+                    colorize(i, "blue")
+                elif not i.string in snippets_list and not "--" in i.string and not "[[" in i.string and not "]]" in i.string and not "--[[" in i.string:
+                    colorize(i, "black")
+            elif i.type == 2:
+                colorize(i, "orange")
+            elif i.type == 3:
+                colorize(i, "green")
+            elif i.type == 54:
+                if not "--" in i.string and not "[[" in i.string and not "]]" in i.string and not "--[[" in i.string:
+                    colorize(i, "red")
+                else:
+                    colorize(i, "gray")
+            elif i.type == 1 and "--" in i.string and "[[" in i.string and "]]" in i.string and "--[[" in i.string:
+                colorize(i.string, "gray")
+    except tokenize.TokenError:
+        pass
+        tag()
+    tag()
+          
 # Check OS and contents existing
 log("CHECKING SUPPORT...")
 if not win64 and contents_existed:
@@ -1114,5 +1165,5 @@ if contents_existed:
         log("ERROR: PACKAGES ARCHIVE NOT FOUND!!!")
         close()
 
-codeeditor.bind("<KeyRelease>", tag)
+codeeditor.bind("<KeyRelease>", search)
 tkinter.mainloop()

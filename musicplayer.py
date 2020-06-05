@@ -2,7 +2,7 @@
 
 debug = open("debug.txt","a+")
 
-# Import Libs
+# Import Libs 
 import tkinter as tk
 from tkinter.ttk import *
 from tkinter.tix import *
