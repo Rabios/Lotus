@@ -36,9 +36,8 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
 
 > NOTES: Until now and unfortunately,Lotus IDE Not supported on Linux and Mac
 
-## Things may notice and will fix later on
-Lotus is currently in BETA and may still,So weird things may face is:
-- [x] Weird syntax highlighting sometimes (FIXED)
+## Things may notice and will add later on
+Lotus is currently in BETA and may still,So some things are missing like: 
 - [ ] No shortcuts
 - [ ] No themes
 
