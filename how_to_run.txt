@@ -1,9 +1,0 @@
-1. Go to redist folder
-2. Run and install Python 3 installer from redist folder
-3. Then get back to main folder(Here)
-4. Run install_dependencies.bat
-5. Once dependencies installed for Python 3,Go next step
-6. Run launch.bat
-7. Have fun!!!
-
-NOTES: Lotus IDE runs only on Microsoft Windows 7+ x64 machines,No x86 machine will be accepted
