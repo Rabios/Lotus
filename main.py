@@ -77,7 +77,6 @@ import tokenize as tokenize
 import io as io
 from keyword import *
 
-
 # Classes for code editor
 class TextLineNumbers(tk.Canvas):
     def __init__(self, *args, **kwargs):
@@ -561,7 +560,7 @@ def runbydefault():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + os.path.realpath(current_file.get()) + " 1")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " 1")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " 1")
         log("CODE RUNNED SUCCESSFULLY!!!")
     elif project_opened:
         saveproject()
@@ -570,7 +569,7 @@ def runbydefault():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
         log("PROJECT RUNNED SUCCESSFULLY!!!")
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -587,7 +586,7 @@ def runbyjit():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + os.path.realpath(current_file.get()) + " 2")
         if fx == ".moon": 
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 4")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 4")
         log("CODE RUNNED SUCCESSFULLY!!!")
     elif project_opened:
         saveproject()
@@ -596,7 +595,7 @@ def runbyjit():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 2")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
         log("PROJECT RUNNED SUCCESSFULLY!!!")
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -613,7 +612,7 @@ def runbylove():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + os.path.realpath(current_file.get()) + " 3")
         if fx == ".moon": 
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 2")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 2")
         log("CODE RUNNED SUCCESSFULLY!!!")
     elif project_opened:
         saveproject()
@@ -622,7 +621,7 @@ def runbylove():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 4")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 4")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 4")
         log("PROJECT RUNNED SUCCESSFULLY!!!")
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -639,7 +638,7 @@ def runbylovr():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + os.path.realpath(current_file.get()) + " 3")
         if fx == ".moon": 
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 3")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 3")
         log("CODE RUNNED SUCCESSFULLY!!!")
     elif project_opened:
         saveproject()
@@ -648,7 +647,7 @@ def runbylovr():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 5")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 5")
         log("PROJECT RUNNED SUCCESSFULLY!!!")
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -665,7 +664,7 @@ def runbyamulet():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + os.path.realpath(current_file.get()) + " 5")
         if fx == ".moon": 
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 5")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_file.bat")) + " " + os.path.realpath(current_file.get()) + " " + os.path.splitext(os.path.realpath(current_file.get()))[0] + ".lua" + " 5")
         log("CODE RUNNED SUCCESSFULLY!!!")
     elif project_opened:
         saveproject()
@@ -674,7 +673,7 @@ def runbyamulet():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 5")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 6")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","run_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]) + " 6")
         log("PROJECT RUNNED SUCCESSFULLY!!!")
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -707,8 +706,11 @@ def runbyscrupp():
 
 def runbybrowser():
     global file_opened
+    global file_opened
+    global project_opened
     path = Path(current_file.get())
-    if file_opened:
+    f,fx = os.path.splitext(path)
+    if file_opened and fx == ".lua":
         log("DEPLOYING TO HTML5...")
         copyfile(os.path.realpath("resources/packages/web/fengari-web.js"),os.path.join(os.path.realpath(path.parents[0]),"fengari-web.js"))
         f = open(os.path.join(os.path.realpath(path.parents[0]),"index.html"),"w+")
@@ -735,7 +737,7 @@ def buildproject():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","build_lua_project.bat")) + " " + os.path.realpath(path.parents[0]))
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","build_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]))
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","build_moonscript_project.bat")) + " " + os.path.realpath(path.parents[0]))
         log("PROJECT BUILT SUCCESSFULLY!!!")
     elif file_opened:
         messagebox.showerror(language_strings[90],language_strings[91])
@@ -751,7 +753,7 @@ def buildwithlove():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","build_lua_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 1")
         log("PROJECT BUILT SUCCESSFULLY!!!")
     elif file_opened:
         messagebox.showerror(language_strings[96],language_strings[97])
@@ -767,7 +769,7 @@ def buildwithlovr():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","build_lua_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 2")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 2")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 2")
         log("PROJECT BUILT SUCCESSFULLY!!!")
     elif file_opened:
         messagebox.showerror(language_strings[96],language_strings[97])
@@ -783,7 +785,7 @@ def buildwithamulet():
         if fx == ".lua":
             os.system(os.path.realpath(os.path.join("resources/packages/","build_lua_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
         if fx == ".moon":
-            os.system(os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
+            os.system("start " + os.path.realpath(os.path.join("resources/packages/","build_moonscript_game.bat")) + " " + os.path.realpath(path.parents[0]) + " 3")
         log("PROJECT BUILT SUCCESSFULLY!!!")
     elif file_opened:
         messagebox.showerror(language_strings[96],language_strings[97])
