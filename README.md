@@ -6,11 +6,12 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
 # Features
 - Lightweight,Fast as lightning
 - Simple and easy to understand,Comes with user-friendly GUI
-- Scriptable and moddable,Written fully in Python 3 and Batchscript 
+- Scriptable and moddable,Written fully in Python 3 and Batchscript
 - Fully free,No payments,No purchases
 - Great for game and software development
 - Comes with all needs to install (You need to download and install packages and docs needed,See below)
 - Comes with music player to have fun while coding
+- Build and run projects and files fast as light!!!
 
 # How to run from source
 - Download and install both 64-bit versions of Python 3 and 7zip
