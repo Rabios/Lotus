@@ -72,7 +72,6 @@ from pygments.token import Token
 from pygments.lexers.scripting import LuaLexer
 from pathlib import *
 from shutil import *
-from playsound import playsound
 
 # Classes for code editor
 class TextLineNumbers(tk.Canvas):
