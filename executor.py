@@ -5,18 +5,11 @@ batcache = open("resources/cache/last.bat","w+")
 batcache.truncate(0)
 
 # Import Libs
-try:
-    import Tkinter as tk
-    from Tkinter import ttk
-    from Tkinter import tix
-    from Tkinter import tkMessageBox
-    from Tkinter import tkFileDialog
-except ImportError:
-    import tkinter as tk
-    from tkinter.ttk import *
-    from tkinter.tix import *
-    from tkinter import messagebox
-    from tkinter import filedialog
+import tkinter as tk
+from tkinter.ttk import *
+from tkinter.tix import *
+from tkinter import messagebox
+from tkinter import filedialog
 from os import system,mkdir,path
 from sys import *
 from PIL import *
