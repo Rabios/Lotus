@@ -33,6 +33,8 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
 - Microsoft Windows 7 and above,64-bit ONLY!!!
 - 500 MB of available storage
 
+> NOTES: 
+
 # Things may notice and will fix later on
 Lotus is currently in BETA and may still,So weird things may face is:
 - [ ] Weird syntax highlighting sometimes,Needed to fix
