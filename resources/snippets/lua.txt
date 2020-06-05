@@ -1,5 +1,7 @@
 require
 require()
+module
+module(modulename,package.seeall)
 print
 print()
 and
