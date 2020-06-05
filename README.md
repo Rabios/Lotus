@@ -38,7 +38,7 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
 
 # Things may notice and will fix later on
 Lotus is currently in BETA and may still,So weird things may face is:
-- [ ] Weird syntax highlighting sometimes,Needed to fix
+- [x] Weird syntax highlighting sometimes (FIXED)
 - [ ] No shortcuts
 - [ ] No themes
 
@@ -55,6 +55,7 @@ Lotus is currently in BETA and may still,So weird things may face is:
   - LuaJIT
   - MoonScript
   - LuaForWindows
+  - Luarocks
  
 - Python modules
   - tkinter
