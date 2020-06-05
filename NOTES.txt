@@ -1,0 +1,9 @@
+Here are all the resources used by Lotus IDE,Divided into many folders
+
+cache: Last files used by Lotus IDE or it's tools
+images: Contains images used by Lotus IDE or it's tools
+inbound: Contains content that used by Lotus IDE or it's tools,Only used at first time use of Lotus IDE,DO NOT DELETE!!!
+languages: Languages files,Translations to Lotus IDE
+snippets: Contains code snippets
+packages: Compilers,Game Engines,And third party softwares used by Lotus IDE
+
