@@ -1,0 +1,102 @@
+Project
+File
+Run
+Build
+Tools
+Settings
+Help
+Documentations
+More
+Window
+Create new project
+Open project
+Save project
+Add files to project
+Open project directory in explorer
+Close project
+Clean project
+Delete project
+Create new file
+Open file
+Save file
+Save file as
+Close file
+Delete file
+Run by default compiler
+Run in LuaJIT
+Run in LOVE
+Run in LOVR
+Run in Amulet
+Run in Scrupp
+Run in browser
+Build as console application
+Build as LOVE game
+Build as LOVR game
+Build as Amulet game
+Build as Scrupp game
+Build for HTML5
+Builder
+Executor
+Lua console
+LuaJIT console
+Command prompt
+Music player
+Open debug log text file
+Fix packages installing problem
+Clear debug log text file
+Restart Lotus IDE
+Lotus IDE Documentation
+FAQ
+Support
+Submit issue on GitHub
+Lua documentation
+LuaJIT documentation (Online)
+MoonScript documentation (Online)
+LOVE documentation
+LOVR documentation (Online)
+Amulet documentation
+Scrupp documentation
+Fengari documentation (Online)
+About
+Source code
+Letter from the heart
+Toggle fullscreen mode
+Exit fullscreen mode
+Close
+noname
+Lotus IDE - Create new project
+Project name
+Projects directory
+Create project
+Cancel
+Project type
+Select project folder to open
+Select file(s) to add to your project
+Delete current project
+Are you sure you want to delete the current project?
+Clean current project
+Are you sure you want to clean the current project?
+Lotus IDE - Create new file
+File name
+Directory
+Create file
+Cancel
+File type
+Delete current file
+Are you sure you want to delete the current file?
+Select file to open
+Save file as
+Packages reinstalled
+All packages reinstalled successfully!!!
+Error
+No project or file currently opened
+Error before compilation
+This type of project is not supported by Scrupp!!!
+Warning
+You can only distribute to HTML5 or run in browser if your current work are not project!!!
+Add folder to project
+Select folder to add to your current project
+Error before compilation
+This type of project is not supported by Scrupp!!!
+Error before compilation
+You can only build when you are in a project
