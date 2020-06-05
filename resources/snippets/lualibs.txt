@@ -35,6 +35,7 @@ math.tanh(n)
 math.tointeger(n)
 math.ult(m,n)
 math.huge
+io
 local io = require("io")
 io.open(f,m)
 io.close(f)
@@ -46,6 +47,7 @@ io.read(f)
 io.tmpfile()
 io.type(o)
 io.write(s)
+string
 string.byte()
 string.char()
 string.dump(f)
@@ -74,6 +76,7 @@ string.upper(s)
 :reverse()
 :sub()
 :upper()
+os
 os.clock()
 os.date(f)
 os.difftime(t2,t1)
@@ -85,6 +88,7 @@ os.rename(oldname,newname)
 os.setlocale(l)
 os.time(t)
 os.tmpname()
+bit
 bit.tobit(n)
 bit.tohex(n)
 bit.bnot(n)
@@ -97,6 +101,7 @@ bit.arshift(n,m)
 bit.rol(n,m)
 bit.ror(n,m)
 bit.bswap(n)
+coroutine
 coroutine.yield()
 coroutine.yield(t)
 coroutine.create(threadname)
@@ -105,6 +110,7 @@ coroutine.status(threadname)
 coroutine.running()
 coroutine.isyieldable()
 coroutine.wrap(threadname)
+table
 table.concat(list [, sep [, i [, j]]])
 table.insert(list, [pos,] value)
 table.move(a1, f, e, t [,a2])
@@ -117,6 +123,7 @@ file:read(...)
 file:seek([whence[,offset]])
 file:setvbuf(mode[,size])
 file:write(...)
+debug
 debug.debug()
 debug.gethook([thread])
 debug.getinfo([thread,]f[,what])
@@ -133,6 +140,7 @@ debug.setuservalue(udata, value)
 debug.traceback([thread,] [message [, level]])
 debug.upvalueid(f, n)
 debug.upvaluejoin(f1, n1, f2, n2)
+package
 package.config
 package.cpath
 package.loaded
@@ -141,6 +149,7 @@ package.path
 package.preload
 package.searchers
 package.searchpath(name,path[,sep[,rep]])
+utf8
 utf8.char()
 utf8.charpattern
 utf8.codes(s)

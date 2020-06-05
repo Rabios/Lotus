@@ -1,0 +1,12 @@
+import
+export
+switch
+when
+extends
+class
+export
+from
+self
+super
+with
+__index

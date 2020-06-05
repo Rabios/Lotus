@@ -49,6 +49,7 @@ am.vec3_array(table)
 am.vec4_array(table)
 am.struct_array(size,spec)
 am.window(settings)
+window
 window.left
 window.right
 window.bottom
@@ -102,6 +103,7 @@ window:touch_norm_delta([touch])
 window:touch_pixel_delta([touch])
 window:touch_force([touch])
 window:touch_force_available()
+node
 node.hidden
 node.paused
 node.num_children
@@ -123,6 +125,7 @@ node:replace(child,replacement)
 node:replace(tagname,replacement)
 node:child(n)
 node:child_pairs()
+ams
 am.group(children)
 am.text([font,]string[,color][,halign[,valign]])
 am.sprite(source[,color][,halign[,valign]])
@@ -161,6 +164,7 @@ am.decode_png(buffer)
 am.texture2d(width[,height])
 am.texture2d(image_buffer)
 am.texture2d(filename)
+texture
 texture.width
 texture.height
 texture.image_buffer
@@ -171,6 +175,7 @@ texture.swrap
 texture.twrap
 texture.wrap
 am.framebuffer(texture[,depth_buf[,stencil_buf]])
+framebuffer
 framebuffer.clear_color
 framebuffer.stencil_clear_value
 framebuffer.projection
@@ -194,12 +199,14 @@ am.save_state(key,state[,format])
 am.load_state(key,[,format])
 am.audio_buffer(buffer,channels,sample_rate)
 am.load_audio(filename)
+audio_buffer
 audio_buffer.channels
 audio_buffer.sample_rate
 audio_buffer.samples_per_channel
 audio_buffer.length
 audio_buffer.buffer
 am.track(buffer[,loop[,playback_speed[,volume]]])
+track
 track.playback_speed
 track.volume
 track:reset([position])
@@ -219,6 +226,7 @@ am.controller_button_pressed(index,button)
 am.controller_button_released(index,button)
 am.controller_button_down(index,button)
 am.load_obj(filename)
+table
 table.shallow_copy(t)
 table.deep_copy(t)
 table.search(arr,elem)

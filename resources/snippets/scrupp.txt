@@ -1,3 +1,4 @@
+scrupp
 scrupp.getSearchPath()
 scrupp.setSearchPath(array)
 scrupp.fileExists(filename)
@@ -112,6 +113,7 @@ scrupp.keyIsDown(key)
 scrupp.setKeyRepeat(delay, interval)
 keypressed(key, utf8_string)
 keyreleased(key)
+vect
 vect.dot(v1_x, v1_y, v2_x, v2_y)
 vect.cross(v1_x, v1_y, v2_x, v2_y)
 vect.perp(v_x, v_y)
@@ -134,6 +136,7 @@ vect.dist()
 vect.near(v1_x, v1_y, v2_x, v2_y, dist)
 vect.forangle(angle)
 vect.toangle(v_x, v_y)
+bb
 bb.intersects(bb1_l, bb1_b, bb1_r, bb1_t, bb2_l, bb2_b, bb2_r, bb2_t)
 bb.containsBB(bb1_l, bb1_b, bb1_r, bb1_t, bb2_l, bb2_b, bb2_r, bb2_t)
 bb.containsVect(bb1_l, bb1_b, bb1_r, bb1_t, v_x, v_y)

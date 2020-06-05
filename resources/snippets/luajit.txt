@@ -21,8 +21,10 @@ ffi.fill(dst, len [,c])
 ffi.abi(param)
 ffi.os
 ffi.arch
+cb
 cb:free()
 cb:set(func)
+jit
 jit.on()
 jit.off()
 jit.flush()

@@ -1,3 +1,4 @@
+love
 love.errorhandler
 love.load
 love.update
