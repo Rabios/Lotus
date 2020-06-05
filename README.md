@@ -19,6 +19,7 @@ Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards s
 - Extract documentations archive in the directory you extracted the repository,Once a folder named `docs` appears,Go next step
 - Download packages archive [here](https://drive.google.com/uc?export=download&id=1dIUchwWa85p49pTk_IvsgbU1sXJ8RgAI)
 - When packages archive downloaded,Create folder named `inbound` inside `resources` folder (Inside repository extracted folder),And move downloaded packages archive to it
+- Create folder named `cache` inside `resources` folder,But keep it empty
 - Get back to the repository folder,Run `install_dependencies.bat` if you installed Python 3 and 7zip
 - Run `launch.bat`,And check that you have installed Python 3 and 7zip
 - As the first startup for Lotus IDE,It will extract packages archive so first startup may take minutes
@@ -43,27 +44,27 @@ Lotus is currently in BETA and may still,So weird things may face is:
 
 # Third party used
 - Main
- - Python
- - 7zip
- - Lua
- - LuaJIT
- - MoonScript
- - LuaForWindows
+  - Python
+  - 7zip
+  - Lua
+  - LuaJIT
+  - MoonScript
+  - LuaForWindows
  
 - Python modules
- - tkinter
- - tkinter.tix
- - tkinter.ttx
- - pygments
- - pynput
- - pysound
- - pyinstaller (Not appears in repository code)
+  - tkinter
+  - tkinter.tix
+  - tkinter.ttx
+  - pygments
+  - pynput
+  - pysound
+  - pyinstaller (Not appears in repository code)
  
 - Game engines
- - LOVE
- - LOVR
- - Amulet
- - Scrupp
+  - LOVE
+  - LOVR
+  - Amulet
+  - Scrupp
  
 > NOTES: All third party softwares used comes with their licenses
 
