@@ -79,3 +79,16 @@ Lotus IDE Licensed under MIT License,Following all the third parties that used b
 - [FAQ](https://github.com/Rabios/Lotus/blob/master/FAQ.md)
 - [How to add snippets to Lotus IDE](https://github.com/Rabios/Lotus/blob/master/Snippets.md)
 - [How to translate Lotus IDE](https://github.com/Rabios/Lotus/blob/master/Translate.md)
+
+# Screenshots
+Splashscreen
+
+<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(119).png">
+
+Editor GUI
+
+<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(118).png">
+
+Code editing and syntax highlighting (Sorry but the parsing of the highlighter needs fix,Help me if you can)
+
+<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(116).png">
