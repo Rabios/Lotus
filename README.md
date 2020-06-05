@@ -1,6 +1,8 @@
 # Lotus
 Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards software and game development and also for basic needs
 
+Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
+
 # Features
 - Lightweight,Fast as lightning
 - Simple and easy to understand,Comes with user-friendly GUI
@@ -25,7 +27,7 @@ Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards s
 - As the first startup for Lotus IDE,It will extract packages archive so first startup may take minutes
 - That's all,I know i know these are very long steps but i promise that they are working %100
 
-> If you don't want to do all that instead,Download it from [releases](),It will come with 7zip and python and everything
+> If you don't want to do all that instead,Download it from [releases](https://github.com/Rabios/Lotus/releases),It will come with 7zip and python and everything
 
 # Requirements
 - Microsoft Windows 7 and above,64-bit ONLY!!!
