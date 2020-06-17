@@ -100,3 +100,10 @@ Error before compilation
 This type of project is not supported by Scrupp!!!
 Error before compilation
 You can only build when you are in a project
+Error
+File "main.txt" not found
+Notification
+Project cleaned successfully!!!
+Run in Raylib
+Build as Raylib game
+Raylib documentation
