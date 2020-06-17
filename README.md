@@ -55,7 +55,6 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
   - [pygments](https://pygments.org)
   - [pynput](https://pypi.org/project/pynput)
   - [playsound](https://pypi.org/project/playsound)
-  - [pyinstaller (Not appears in repository code)](https://pyinstaller.readthedocs.io/en/stable)
   - [Pillow](https://pillow.readthedocs.io/en/stable)
   - [webbrowser](https://docs.python.org/3.8/library/webbrowser.html)
   - [os](https://docs.python.org/3.8/library/os.html)
@@ -84,7 +83,7 @@ Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
  
 > NOTES: All third party softwares used comes with their licenses
 
-> NOTES: Cause of using pygments,The IDE maybe get slow and faces some lags in some cases
+> NOTES: Cause of using pygments,The IDE may get slow and face some lags in some cases
 
 ## License
 Lotus IDE Licensed under MIT License,Following all the third parties that used by Lotus IDE itself
