@@ -1,9 +1,9 @@
 # PyLotus,Lua and Moonscript IDE written in Python 3
 # Written by Rabia Alhaffar in 25/May/2020
-# Last update: v0.1.2
+# Last update: v0.1.3
 # Lotus is Open-Source Lua IDE for developing applications and games with Lua and Moonscript
 # From simple console apps to games with your preferred engine/framework
-# See LICENSES.txt and THIRD_PARTY_LICENSES.txt for more
+# See LICENSE.txt for more
 
 # Code editor resources
 # https://stackoverflow.com/questions/16369470/tkinter-adding-line-number-to-text-widget
@@ -15,7 +15,7 @@ debug = open("debug.txt","a+")
 mainprojectfilename = "main.lua"
 fileext = ".lua"
 count = 0
-lotus_version = "v0.1.2 BETA"
+lotus_version = "v0.1.3"
 
 projectlabel = ""
 current_project_loc = ""
@@ -38,6 +38,16 @@ for strings in language.readlines():
 current_language.close()
 language.close()
 
+# Getting theme of Lotus IDE
+current_theme = open("resources/themes/current.txt","r")
+theme_filename = current_theme.read()
+theme_file = open("resources/themes/" + str(theme_filename),"r")
+theme_strings = []
+for themestrings in theme_file.readlines():
+    theme_strings.append(themestrings.strip())
+current_theme.close()
+theme_file.close()
+
 # Snippets list,Starts by custom snippets and then by the language snippets
 # Create your own in snippets.txt,Note that each snippet is function or something takes 1 line
 snippets_content = [ open("resources/snippets/custom.txt","r"),
@@ -49,6 +59,7 @@ snippets_content = [ open("resources/snippets/custom.txt","r"),
                      open("resources/snippets/lovr.txt","r"),
                      open("resources/snippets/amulet.txt","r"),
                      open("resources/snippets/scrupp.txt","r") ]
+
 snippets_list = []
 for snippets in snippets_content:
     snip = snippets.readlines()
@@ -379,7 +390,29 @@ def deleteproject():
         closeproject()
         rmtree(os.path.realpath(path.parents[0]),ignore_errors = True)
     log("PROJECT DELETED SUCCESSFULLY!!!")
+
+def obfuscateproject():
+    path = Path(current_file.get())
+    log("OBFUSCATING PROJECT...")
+    os.system(os.path.realpath(os.path.join("resources/packages/","obfuscate_lua_project.bat")) + " " + os.path.realpath(current_file.get()))
+    os.startfile(pathquote(os.path.join(os.path.realpath(path.parents[0]),"bytecode")))
+    log("PROJECT OBFUSCATED SUCCESSFULLY!!!")
     
+
+def decompileproject():
+    path = Path(current_file.get())
+    log("DECOMPILING PROJECT...")
+    os.system(os.path.realpath(os.path.join("resources/packages/","decompile_lua_project_bytecode.bat")) + " " + os.path.realpath(current_file.get()))
+    os.startfile(pathquote(os.path.join(os.path.realpath(path.parents[0]),"decompiled")))
+    log("PROJECT DECOMPILED SUCCESSFULLY!!!")
+
+def disasmproject():
+    path = Path(current_file.get())
+    log("DISASSEMBLING PROJECT...")
+    os.system(os.path.realpath(os.path.join("resources/packages/","disassembly_lua_project.bat")) + " " + os.path.realpath(current_file.get()))
+    os.startfile(pathquote(os.path.join(os.path.realpath(path.parents[0]),"disasm")))
+    log("PROJECT DISASSEMBLED SUCCESSFULLY!!!")
+
 def cleanproject():
     global project_opened
     log("CLEANING PROJECT...")
@@ -469,6 +502,24 @@ def closefile():
         project_opened = False
         log("FILE CLOSED SUCCESSFULLY!!!")
 
+def obfuscatefile():
+    log("OBFUSCATING FILE...")
+    savefile()
+    os.system(os.path.realpath(os.path.join("resources/packages/","obfuscate_lua_file.bat")) + " " + os.path.realpath(current_file.get()))
+    log("FILE OBFUSCATED SUCCESSFULLY!!!")
+
+def decompilefile():
+    log("DECOMPILING FILE...")
+    savefile()
+    os.system(os.path.realpath(os.path.join("resources/packages/","decompile_lua_file_bytecode.bat")) + " " + os.path.realpath(current_file.get()))
+    log("FILE DECOMPILED SUCCESSFULLY!!!")
+
+def disasmfile():
+    log("DISASSEMBLING FILE...")
+    savefile()
+    os.system(os.path.realpath(os.path.join("resources/packages/","disassembly_lua_file.bat")) + " " + os.path.realpath(current_file.get()))
+    log("FILE DISASSEMBLED SUCCESSFULLY!!!")
+
 def deletefile():
     global file_opened
     if file_opened:
@@ -554,7 +605,7 @@ def fixpackages():
         close()
 
     # Show message that packages reinstalled
-    messagebox.showinfo(language_strings[88],language_strings[90])
+    messagebox.showinfo(language_strings[88],language_strings[89])
     log("PACKAGES REINSTALLED SUCCESSFULLY!!!")
 
 def runbydefault():
@@ -713,6 +764,27 @@ def runbyscrupp():
     else:
         messagebox.showerror(language_strings[90],language_strings[91])
 
+def runbyraylib():
+    global file_opened
+    global project_opened
+    path = Path(current_file.get())
+    f,fx = os.path.splitext(path)
+    if file_opened:
+        savefile()
+        log("COMPILING CODE...")
+        log("RUNNING CODE...")
+        if fx == ".lua":
+            os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_file.bat")) + " " + pathquote(os.path.realpath(current_file.get())) + " 7")
+    elif project_opened:
+        saveproject()
+        log("COMPILING PROJECT...")
+        log("RUNNING PROJECT...")
+        if fx == ".lua":
+            os.system(os.path.realpath(os.path.join("resources/packages/","run_lua_project.bat")) + " " + pathquote(os.path.realpath(path.parents[0])) + " 7")
+    else:
+        messagebox.showerror(language_strings[90],language_strings[91])
+        
+        
 def runbybrowser():
     global file_opened
     global file_opened
@@ -823,6 +895,21 @@ def buildwithscrupp():
     elif file_opened:
         messagebox.showerror(language_strings[96],language_strings[97])
 
+def buildwithraylib():
+    global project_opened
+    path = Path(current_file.get())
+    f,fx = os.path.splitext(path)
+    if project_opened:
+        saveproject()
+        log("COMPILING PROJECT...")
+        log("BUILDING PROJECT...")
+        if fx == ".lua":
+            os.system(os.path.realpath(os.path.join("resources/packages/","build_lua_game.bat")) + " " + pathquote(os.path.realpath(path.parents[0])) + " 5")
+            os.startfile(pathquote(os.path.join(os.path.realpath(path.parents[0]),"build")))
+        elif fx == ".moon" or fx == ".slua":
+            messagebox.showerror(language_strings[94],language_strings[95])
+        log("PROJECT BUILT SUCCESSFULLY!!!")
+        
 # Documentations functions section
 def luadocs():
     if os.path.exists("docs") and not os.path.isfile("docs"):
@@ -873,6 +960,13 @@ def fengaridocs():
     webbrowser.open_new_tab("https://fengari.io")
     log("DOCUMENTATION OPENED SUCCESSFULLY!!!")
 
+def raylibdocs():
+    log("OPENING DOCUMENTATION...")
+    if os.path.exists("docs/raylib"):
+        webbrowser.open_new_tab(os.path.join(os.path.realpath("docs/raylib"),"raylib_cheatsheet.html"))
+        log("DOCUMENTATION OPENED SUCCESSFULLY!!!")
+
+
 # Music player,To have fun while coding
 def musicplayer():
     log("LAUNCHING MUSIC PLAYER...")
@@ -904,7 +998,9 @@ tkinter = tk.Tk()
 # Check contents before starting...
 # Mainly,Lotus uses tkinter and Pillow and some main python modules as part of it
 # NOTES: Unfortunately,Lotus only supports 64-bit versions of Microsoft Windows,Cause of some game engines binaries that is for 64-bit
-contents_existed = (os.path.exists("resources/images") and os.path.exists("resources/inbound") and os.path.exists("docs") and os.path.exists("projects"))
+os.system("mkdir projects") # Hack in case projects folder not found
+os.system("mkdir resources\cache")
+contents_existed = (os.path.exists("resources/images") and os.path.exists("resources/inbound") and os.path.exists("docs") and os.path.exists("resources/themes"))
 win64 = os.environ["PROGRAMFILES(X86)"]
         
 # IDE Window
@@ -975,6 +1071,7 @@ runmenu.add_command(label = language_strings[26],command = runbylove)
 runmenu.add_command(label = language_strings[27],command = runbylovr)
 runmenu.add_command(label = language_strings[28],command = runbyamulet)
 runmenu.add_command(label = language_strings[29],command = runbyscrupp)
+runmenu.add_command(label = language_strings[106],command = runbyraylib)
 runmenu.add_command(label = language_strings[30],command = runbybrowser)
 
 # Build (Compile and export as executable) menu commands
@@ -983,6 +1080,7 @@ buildmenu.add_command(label = language_strings[32],command = buildwithlove)
 buildmenu.add_command(label = language_strings[33],command = buildwithlovr)
 buildmenu.add_command(label = language_strings[34],command = buildwithamulet)
 buildmenu.add_command(label = language_strings[35],command = buildwithscrupp)
+buildmenu.add_command(label = language_strings[107],command = buildwithraylib)
     
 # Tools menu commands
 toolsmenu.add_command(label = language_strings[38],command = openexec)
@@ -1012,6 +1110,7 @@ docsmenu.add_command(label = language_strings[55],command = lovrdocs)
 docsmenu.add_command(label = language_strings[56],command = amuletdocs)
 docsmenu.add_command(label = language_strings[57],command = scruppdocs)
 docsmenu.add_command(label = language_strings[58],command = fengaridocs)
+docsmenu.add_command(label = language_strings[108],command = raylibdocs)
 
 # More menu commands
 moremenu.add_command(label = language_strings[59],command = about)
@@ -1029,14 +1128,14 @@ if file == "":
     current_file.set(language_strings[65])
     
 # Filename label
-filename_label = Label(tkinter,textvariable = current_file) 
+filename_label = Label(tkinter,textvariable = current_file,background = theme_strings[2],foreground = theme_strings[3]) 
 filename_label.pack()
 
 # Code editor
 log("LOADING CODE EDITOR...")
 
 # Use CustomText and LineNumbers class with Scrollbar widget
-codeeditor = CustomText(tkinter)
+codeeditor = CustomText(tkinter,background = theme_strings[0])
 codeeditor.configure(wrap = "none",font = ("Lucida Console", "12"))
 linenumbers = TextLineNumbers(tkinter, width = 50)
 linenumbers.attach(codeeditor)
@@ -1098,17 +1197,17 @@ def tag(*args):
 
     for token, content in lex(codeeditor.get("1.0", "end"), LuaLexer()):
         if token == Token.Literal.Number.Integer or token == Token.Literal.Number.Float or token == Token.Literal.Number.Hex:
-            color(content,color = "orange")
+            color(content,color = theme_strings[4])
         elif token == Token.Operator:
-            color(content,color = "red")
+            color(content,color = theme_strings[5])
         elif token == Token.Comment.Single or token == Token.Comment.Multiline or token == Token.Comment.Special:
-            color(content,color = "grey")
+            color(content,color = theme_strings[6])
         elif token == Token.Punctuation:
-            color(content,color = "black")
+            color(content,color = theme_strings[7])
         elif token == Token.Name.Function or token == Token.Name.Class or token == Token.Variable.Class:
-            color(content,color = "purple")
+            color(content,color = theme_strings[8])
 
-# The new highlighter,DO NOT DELETE THE OLD cause combined with the new
+# The new highlighter,DO NOT DELETE THE OLD cause merged with the new one
 # All fixed up
 def colorize(*args):
     global count
@@ -1130,11 +1229,11 @@ def search(event):
         for i in tokenize.tokenize(io.BytesIO(codeeditor.get("1.0", "end").encode("utf-8")).readline):
             if i.type == 1:
                 if i.string in snippets_list:
-                    colorize(i, "blue")
+                    colorize(i, theme_strings[9])
             elif i.type == 2:
-                colorize(i, "orange")
+                colorize(i, theme_strings[10])
             elif i.type == 3:
-                colorize(i, "green")
+                colorize(i, theme_strings[11])
     except tokenize.TokenError:
         pass
         tag()

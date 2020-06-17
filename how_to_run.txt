@@ -1,0 +1,5 @@
+1. Run install_requirements.bat For the first time to install requirements needed
+2. Run launch.bat
+3. Have fun!!!
+
+NOTES: Lotus IDE runs only on Microsoft Windows 7+ x64 machines,No x86 machine will be accepted

@@ -22,7 +22,7 @@ def log(msg):
 log("MUSIC PLAYER: STARTING MUSIC PLAYER...")
 tkinter = tk.Tk()
 tkinter.transient()
-musicfile = filedialog.askopenfilename(title = "Select music file to play",initialdir = "C:/",filetypes = (("MP3 files","*.mp3"),("OGG files","*.ogg"),("Other file types","*.*")))
+musicfile = filedialog.askopenfilename(title = "Select music file to play",initialdir = "C:/",filetypes = (("MP3 file","*.mp3"),("OGG file","*.ogg"),("WAV file","*.wav"),("Other file types","*.*"))
 if musicfile and win64:
     tkinter.destroy()
     log("MUSIC PLAYER: PLAYING COOL MUSIC...")

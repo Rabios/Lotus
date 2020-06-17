@@ -1,7 +1,7 @@
 # Lotus
 Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards software and game development and also for basic needs
 
-Lotus developed entirely in 11 days,11 Days of the hard work and the inspiration
+Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
 
 ## Features
 - Lightweight,Fast as lightning
@@ -9,9 +9,11 @@ Lotus developed entirely in 11 days,11 Days of the hard work and the inspiration
 - Scriptable and moddable,Written fully in Python 3 and Batchscript
 - Fully free,No payments,No purchases
 - Great for game and software development
-- Comes with all needs to install (You need to download and install packages and docs needed,See below)
+- Comes with all needs to install (download and install packages and docs needed to run from source,See below)
 - Comes with music player to have fun while coding
 - Build and run projects and files fast as light!!!
+- Comes with tools to disassembly,decompile,And obfuscate projects and files
+- Ability to customize themes
 
 ## How to run from source
 - Download and install both 64-bit versions of Python 3 and 7zip
@@ -28,20 +30,15 @@ Lotus developed entirely in 11 days,11 Days of the hard work and the inspiration
 - As the first startup for Lotus IDE,It will extract packages archive so first startup may take minutes
 - That's all,I know i know these are very long steps but i promise that they are working %100
 
-> If you don't want to do all that instead,Download it from [releases](https://github.com/Rabios/Lotus/releases),It will come with 7zip and python and everything
+> If you don't want to do all that instead,Download installer it from [releases](https://github.com/Rabios/Lotus/releases),It will come with 7zip and python and everything
+
+> NOTES: Even if you're running Lotus IDE from source,To start IDE run `launch.bat`
 
 ## Requirements
 - Microsoft Windows 7 and above,64-bit ONLY!!!
-- 500 MB of available storage
+- 600 MB of available storage
 
 > NOTES: Until now and unfortunately,Lotus IDE Not supported on Linux and Mac
-
-## Things may notice and will add later on
-Lotus is currently in BETA and may still,So some things are missing like: 
-- [ ] No shortcuts
-- [ ] No themes
-
-> Also please help and support me by fixing the first problem,As pygments cause a lot of problems
 
 ## Credits
 - [Rabia Alhaffar](https://github.com/Rabios),The main developer of Lotus IDE
@@ -78,13 +75,16 @@ Lotus is currently in BETA and may still,So some things are missing like:
   - [LuaForWindows](https://github.com/rjpcomputing/luaforwindows)
   - [Luarocks](https://luarocks.org)
  
-- Game engines
+- Game engines/frameworks/libraries
   - [LOVE](https://love2d.org)
   - [LOVR](https://lovr.org)
   - [Amulet](https://www.amulet.xyz)
   - [Scrupp](http://scrupp.sourceforge.net)
+  - [Raylib](http://raylib.com)
  
 > NOTES: All third party softwares used comes with their licenses
+
+> NOTES: Cause of using pygments,The IDE maybe get slow and faces some lags in some cases
 
 ## License
 Lotus IDE Licensed under MIT License,Following all the third parties that used by Lotus IDE itself
@@ -93,9 +93,3 @@ Lotus IDE Licensed under MIT License,Following all the third parties that used b
 - [FAQ](https://github.com/Rabios/Lotus/blob/master/FAQ.md)
 - [How to add snippets to Lotus IDE](https://github.com/Rabios/Lotus/blob/master/Snippets.md)
 - [How to translate Lotus IDE](https://github.com/Rabios/Lotus/blob/master/Translate.md)
-
-## Screenshots
-<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(119).png">
-<br>
-<img src="https://github.com/Rabios/Lotus/blob/master/Screenshot%20(118).png">
-<br>

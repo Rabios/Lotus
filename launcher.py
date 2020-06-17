@@ -30,7 +30,9 @@ def start():
 # Mainly,Lotus uses tkinter and Pillow and some main python modules as part of it
 # NOTES: Unfortunately,Lotus only supports 64-bit versions of Microsoft Windows,Cause of some game engines binaries that is for 64-bit
 log("LAUNCHER: CHECKING SUPPORT...")
-contents_existed = (os.path.exists("resources/images") and os.path.exists("resources/inbound") and os.path.exists("docs") and os.path.exists("projects"))
+os.system("mkdir projects")
+os.system("mkdir resources\cache")
+contents_existed = (os.path.exists("resources/images") and os.path.exists("resources/inbound") and os.path.exists("docs") and os.path.exists("resources/themes"))
 win64 = os.environ["PROGRAMFILES(X86)"]
 
 # Initializing window
