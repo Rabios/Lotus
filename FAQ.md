@@ -28,3 +28,6 @@ NO,But you can create one so if you would see [here](https://github.com/Rabios/L
 
 ## Won't Lotus IDE eat my RAM memory?
 I think you are asking about visual studio not Lotus IDE,right? OK,Lotus IDE designed to run from source code,And it has very powerful debugging,Of course it will not take RAM,I sway!!!
+
+## Why Lotus IDE becomes slow at most times?
+Cause of Pygments code highlighting,It affects performance so that's sucks!!!
