@@ -1,7 +1,7 @@
 # Lotus
 Lotus is an Open-Source,Moddable,Freeware Lua and MoonScript IDE,Aimed towards software and game development and also for basic needs
 
-Lotus developed entirely 11 days,11 Days of the hard work and the clever ideas
+Lotus developed entirely 11 days,11 Days of the hard work.
 
 ## Features
 - Lightweight,Fast as lightning
