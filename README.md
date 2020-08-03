@@ -37,6 +37,7 @@ Lotus developed entirely 11 days,11 Days of the hard work.
 ## Requirements
 - Microsoft Windows 7 and above,64-bit ONLY!!!
 - 600 MB of available storage
+- 4GB or more RAM
 
 > NOTES: Until now and unfortunately,Lotus IDE Not supported on Linux and Mac
 
